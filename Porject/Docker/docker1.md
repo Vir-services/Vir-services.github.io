@@ -21,10 +21,13 @@
 
     1.查看当前版本。
     > sudo lsb_release -a
+
     2.下载deb包
     > wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.03.2~ce-0~ubuntu-xenial_amd64.deb
+
     3.安装deb包
     > sudo dpkg -i docker-ce_17.03.2-ce-0-ubuntu-xenial_amd64.deb
+
     4. 查看版本
     >> docker --version
 
