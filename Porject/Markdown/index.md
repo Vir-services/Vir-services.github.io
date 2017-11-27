@@ -179,7 +179,7 @@
  > 推荐使用atom，支持gitbub markdown预览，便捷提交。
 
  - 使用atom markdown预览（有道云笔记也支持哦。）
- >输入 markdown preview toggle(可以偷懒只输入mdpt，跟Sublime Text一样支持模糊匹配)
+ > 输入 markdown preview toggle(可以偷懒只输入mdpt，跟Sublime Text一样支持模糊匹配)
 
  > 输入快捷键 ctrl + shift + M
 
