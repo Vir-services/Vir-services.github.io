@@ -4,4 +4,4 @@
 
 ## [【Game】](/Game)
 
-## [【Learn】](/Project)
+## [【Learn】](/Porject)

@@ -169,3 +169,19 @@
 12.【高效绘制 流程图、序列图、甘特图】：
 
 详见&#8195;[[简明版]有道云笔记Markdown指南](http://note.youdao.com/iyoudao/?p=2411&vendor=unsilent14)
+
+
+# 【经验】
+ 1.如何快捷的使用github pages部署静态网页？  
+ > 推荐使用atom，支持gitbub markdown预览，便捷提交。
+
+ - 使用atom markdown预览（有道云笔记也支持哦。）
+ >输入 markdown preview toggle(可以偷懒只输入mdpt，跟Sublime Text一样支持模糊匹配)
+
+ > 输入快捷键 ctrl + shift + M
+
+ - 如何上传？
+  > 保存好修改后，输入快捷键 ctrl + 9，点击stage all，输入commit message，点击commit，点击上下箭头提交、合并。
+
+ 2.windwos写github上传上去后无法显示为正常markdown页面、乱码。
+ > 创建的文件类型需要为LF或unix格式，编码为utf-8。
