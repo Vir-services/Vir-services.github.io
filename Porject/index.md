@@ -2,6 +2,8 @@
 
 ## [【Markdown】](/Porject/Markdown)
 
+<!--
+
 ## [【Shell】](/Porject/Shell)
 
 ## [【Docker】](/Porject/Docker)
@@ -14,4 +16,4 @@
 
 ## [【ELK】](/Porject/ELK)
 
-## [【知识结构】](/Porject/PIC/ck.png)
+-->

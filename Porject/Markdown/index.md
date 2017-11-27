@@ -170,6 +170,9 @@
 
 详见&#8195;[[简明版]有道云笔记Markdown指南](http://note.youdao.com/iyoudao/?p=2411&vendor=unsilent14)
 
+13.【注释】
+  * 直接使用 html 注释兼容大部分 markdown 解析器. <!-- 注释 -->
+  > <!-- 注释 --\>
 
 # 【经验】
  1.如何快捷的使用github pages部署静态网页？  
