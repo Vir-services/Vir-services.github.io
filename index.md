@@ -1,7 +1,6 @@
+# CK's Boke，欢迎排雷。
 # 索引
 
 ## [【Game】](/Game)
 
-## [【Markdown】](/Porject/Markdown)
-
-## [【Docker】](/Porject/Docker)
+## [【Learn】](/Project)
