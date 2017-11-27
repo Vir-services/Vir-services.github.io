@@ -1,4 +1,5 @@
-# CK's Boke，欢迎排雷。
+# CK's Boke。
+
 # 索引
 
 ## [【Game】](/Game)
