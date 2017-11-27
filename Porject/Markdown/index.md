@@ -96,7 +96,7 @@
     \`\`\`
 
     代码语法 ``` 书写
-    
+
     \`\`\`
 
         或者直接空八个，引入代码块
@@ -118,7 +118,7 @@
 
     > 用方括号包起来，Markdown就会自动把它转成链接
 
-    >> <<https://www.eailoo.com>>
+    >> <https://www.eailoo.com>
 * 插入图片：！开头，中括号括起来显示信息，小括号内填写链接地址
     > 写法: \![eailoo]\(www.eailoo.com/PIC/E.png)
     >> ![eailoo](www.eailoo.com/PIC/E.png)
