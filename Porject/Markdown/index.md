@@ -223,3 +223,11 @@
 
  2.windwos写github上传上去后无法显示为正常markdown页面、乱码。
  > 创建的文件类型需要为LF或unix格式，编码为utf-8。
+
+ > 使用绝对路径访问页面markdown文件.md后缀需换成.html
+
+ >> http://www.eailoo.com/index.md
+
+ >> 换成: 
+
+ >> http://www.eailoo.com/index.html
