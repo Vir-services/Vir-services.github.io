@@ -194,12 +194,15 @@
     * 菜单栏找不到或消失怎么办？
       > 输入快捷键 alt + v 点击切换菜单栏
 
-   2.国内可能安装会遇到问题，可以进入github下载插件放到C:\Users\Administrator\.atom\packages ,使用apm install 手动安装。
+   2.国内可能安装会遇到问题，可以进入github下载插件放到C:\Users\Administrator\.atom\packages,使用apm install 手动安装。
+
     * 如何找到.atom目录？
       * 点击菜单栏文件-设置-打开插件源码目录-右键点击show in explorer 找到.atom
+
     * apm install 由于网络问题失败怎么办?
       * 更换apm源。
       > apm config set registry npm_mirror_url
+
       > apm config set registry http://registry.npm.taobao.org
 
   - 推荐使用的插件？
