@@ -1,3 +1,3 @@
 # Haproxy 内容:
 
-##  [【haproxy简易配置】](./haproxy01.md)
+##  [【haproxy安装配置一】](./haproxy01.md)
