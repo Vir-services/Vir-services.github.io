@@ -179,6 +179,8 @@
  1.如何快捷的使用github pages部署静态网页？  
  > 推荐使用atom，支持gitbub markdown预览，便捷提交。
 
+ > 官方手册 <http://flight-manual.atom.io>
+
  - 使用atom markdown预览（有道云笔记也支持哦。）
  > 输入 markdown preview toggle(可以偷懒只输入mdpt，跟Sublime Text一样支持模糊匹配)
 
@@ -208,7 +210,7 @@
       > python函数提示
 
     * atom-simplified-chinese-menu
-      > 简体中文 
+      > 简体中文
 
     * activate-power-mode
       > 炫酷的输入体验。
