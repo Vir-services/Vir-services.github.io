@@ -203,7 +203,7 @@
       * 更换apm源。
       > apm config set registry npm_mirror_url
 
-      > apm config set registry http://registry.npm.taobao.org
+      >> apm config set registry http://registry.npm.taobao.org
 
   - 推荐使用的插件？
     * atom-python-run
@@ -228,6 +228,6 @@
 
  >> http://www.eailoo.com/index.md
 
- >> 换成: 
+ >> 换成:
 
  >> http://www.eailoo.com/index.html
