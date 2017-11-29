@@ -122,7 +122,7 @@
 * 插入图片：！开头，中括号括起来显示信息，小括号内填写链接地址
     > 写法: \![eailoo]\(http://www.eailoo.com/PIC/E.png)
 
-   ![eailoo](http://www.eailoo.com/PIC/E.png)
+    > ![eailoo](http://www.eailoo.com/PIC/E.png)
 
 9.【分割线】：
 *  分割线：单独一行输入3个或以上的短横线、星号、下划线，短横线和星号之间可以输入任意空格。
