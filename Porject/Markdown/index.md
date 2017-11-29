@@ -120,8 +120,9 @@
 
     >> <https://www.eailoo.com>
 * 插入图片：！开头，中括号括起来显示信息，小括号内填写链接地址
-    > 写法: \![eailoo]\(www.eailoo.com/PIC/E.png)
-    >> ![eailoo](www.eailoo.com/PIC/E.png)
+    > 写法: \![eailoo]\(http://www.eailoo.com/PIC/E.png)
+
+   ![eailoo](http://www.eailoo.com/PIC/E.png)
 
 9.【分割线】：
 *  分割线：单独一行输入3个或以上的短横线、星号、下划线，短横线和星号之间可以输入任意空格。
@@ -185,6 +186,34 @@
 
  - 如何上传？
   > 保存好修改后，输入快捷键 ctrl + 9，点击stage all，输入commit message，点击commit，点击上下箭头提交、合并。
+
+ - 如何安装插件?
+   1.菜单栏点击文件-设置-安装 搜索需要的插件。
+    * 菜单栏找不到或消失怎么办？
+      > 输入快捷键 alt + v 点击切换菜单栏
+
+   2.国内可能安装会遇到问题，可以进入github下载插件放到C:\Users\Administrator\.atom\packages ,使用apm install 手动安装。
+    * 如何找到.atom目录？
+      * 点击菜单栏文件-设置-打开插件源码目录-右键点击show in explorer 找到.atom
+    * apm install 由于网络问题失败怎么办?
+      * 更换apm源。
+      > apm config set registry npm_mirror_url
+      > apm config set registry http://registry.npm.taobao.org
+
+  - 推荐使用的插件？
+    * atom-python-run
+      > F5,F6 调试python脚本，避免windwos出现中文乱码问题。
+
+    * autocomplete-python
+      > python函数提示
+
+    * atom-simplified-chinese-menu
+      > 简体中文 
+
+    * activate-power-mode
+      > 炫酷的输入体验。
+  ![pic](https://i.github-camo.com/b1d03b9b7a9d7dc9a32d1eab307b5378f8c59a7b/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3638383431352f31313631353536352f31306631363435362d396336352d313165352d386166342d3236356630316663383361302e676966)
+
 
  2.windwos写github上传上去后无法显示为正常markdown页面、乱码。
  > 创建的文件类型需要为LF或unix格式，编码为utf-8。
