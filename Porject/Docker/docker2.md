@@ -24,11 +24,17 @@ docker --help ：查看帮助
 
 
 * OPTIONS 容器的常用参数 (docker create 和docker run 创建时参数相同。)
-
+  - -h （hostname）
+    - 指定主机名
+  -
+  - -itd
   - -- restart on-failure:3
     - 当容器停止时自动重启，重启3次。
 
+  - --ulimit nproc=10240/nofile=10240
+    - 用户打开最大进程数/最大打开文件数（句柄）
 
+  - -v (--volume list)
 
 ## 4. 查看运行中容器
 > docker ps -a
@@ -88,3 +94,12 @@ docker --help ：查看帮助
 
 - 获取配置信息：
   > sudo docker inspect --format='{{json .config}}' $INSTANCE_ID
+
+## 11. docker网络管理
+> docker network [options]
+
+>> docker network create 
+
+>> docker network
+
+>> docker network connect

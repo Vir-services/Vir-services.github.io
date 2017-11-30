@@ -1,5 +1,4 @@
 # **Markdown学习笔记**
-####  作者：CK
 ##### *部分资料来源：*
 &#8195;[认识与入门 Markdown](https://sspai.com/post/25137)
 
@@ -200,10 +199,13 @@
       * 点击菜单栏文件-设置-打开插件源码目录-右键点击show in explorer 找到.atom
 
     * apm install 由于网络问题失败怎么办?
-      * 更换apm源。
+      * 更换apm源，或挂代理。
       > apm config set registry npm_mirror_url
 
-      >> apm config set registry http://registry.npm.taobao.org
+      >> apm config set registry http://registry.npm.taobao.org 或者http://r.cnpmjs.org
+
+  - 默认编码
+   * 菜单栏点击文件-设置-核心设置-默认编码
 
   - 推荐使用的插件？
     * atom-python-run
