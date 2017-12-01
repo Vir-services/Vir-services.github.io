@@ -1,7 +1,7 @@
 # 三、docker 容器管理（常用命令篇）
 
 ``docker --help`` ：查看帮助
-> [man docker](./man/dockerman.md)
+> [``man docker``](./man/dockerman.md)
 
 ## 1.获取docker镜像
 > ``docker search [image name]``,搜索相关镜像。
@@ -16,7 +16,7 @@
 >  ``docker images``
 
 ## 3.创建|启动容器(docker create --help|docker run --help)
-> [man docker run](./man/dockerrunman.md)
+> [``man docker run``](./man/dockerrunman.md)
 
 * docker create 创建后不会启动
 > ``docker create [OPTIONS] IMAGE [COMMAND] [ARG...]``

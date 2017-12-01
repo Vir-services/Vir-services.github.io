@@ -1,4 +1,4 @@
-# 内容只供研究学习使用：
+# 内容均为学习笔记，查漏补缺。：
 
 ## [【Markdown】](/Porject/Markdown)
 
