@@ -68,7 +68,7 @@
   > ``--dns list``  指定容器dns (内部集成，也可以用外部。)
     >> ``docker run -itd --dns 114.114.114.114 [image name]``
 
-  > `--dns-search=[] ``设置docker要使用的DNS搜索域
+  > ``--dns-search=[] ``设置docker要使用的DNS搜索域
 
   > ``-e (--env list)`` 设置环境变量（警告：重要的是要明白，一个容器内的所有源自Docker的环境变量都可供任何链接到它的容器使用。如果敏感数据存储在其中，这可能会带来严重的安全隐患。）
     > ``docker run -itd -e "TEST=12345" [image name]``
