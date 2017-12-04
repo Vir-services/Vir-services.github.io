@@ -20,9 +20,11 @@
 
 * docker create 创建后不会启动
 > ``docker create [OPTIONS] IMAGE [COMMAND] [ARG...]``
+  >> ``docker create [image name]``
 
 * docker run 创建后启动容器
 > ``docker run [OPTIONS] IMAGE [COMMAND] [ARG...]``
+  >> ``docker run [image name]``
 
 * OPTIONS 容器的常用参数 (docker create 和docker run 创建时参数相同。)
 
@@ -40,10 +42,10 @@
 
     >> ``-d （detach）`` 后台运行
 
-  > ``--name`` 指定容器名
+  > ``--name`` 指定容器名(不指定时系统随机命名。)
     >> ``docker run -itd --name myfirstdocker [image name] ``
 
-  > ``-h （--hostname）`` 指定主机名
+  > ``-h （--hostname）`` 指定主机名(不指定时和container id一致)
     >> ``docker run -itd -h test_001 [image name]``
 
   > ``--add-host list`` 给运行容器动态添加hosts记录
@@ -52,7 +54,8 @@
   > ``--link`` 通过link方式创建容器，然后我们可以使用被link容器的别名进行访问。从而解除应用对IP的依赖。不幸的是,link方式只能解决单机容器间的互联。多机情况下，容器的互联需要其他的方式。(警告：该--link标志是Docker的旧版功能。它可能最终被删除。除非您绝对需要继续使用它，否则我们建议您使用用户定义的网络来促进两个容器之间的通信，而不是使用 --link。用户定义的网络不支持的一个功能--link是在容器之间共享环境变量。但是，您可以使用其他机制（如卷）以更受控制的方式共享容器之间的环境变量。)
     >> ``docker run -itd --link [CONTAINER id]:myfirstdocker [image name]``
 
-  > ``-a (--attach list)``
+  > ``-a (--attach list)`` 如果在执行run命令时没有指定-a，那么docker默认会挂载所有标准数据流，包括输入输出和错误。你可以特别指定挂载哪个标准流。
+    >> ``docker run -a stdin -a stdout -i -t ubuntu:14.04/bin/bash``(只挂载标准输入输出)
 
   > ``--cap-add list`` 设置容器中使用的cgroups的特定Capablity。若设置为ALL，则使用所有的Capablity
 
