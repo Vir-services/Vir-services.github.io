@@ -224,7 +224,8 @@
 - 拷贝宿主文件到容器中
 > ``docker cp $path [CONTAINER ID|NAMES]:$path ``
 
-## 13.docker对比
+## 13.docker diff
+- 比较一个容器不同版本提交的文件差异
 > ``docker diff [CONTAINER ID|NAMES]``
 
 ## 14.docker容器重命名
