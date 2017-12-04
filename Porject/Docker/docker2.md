@@ -85,13 +85,11 @@
   > ``-P (大写)(--publish-all=true|false)`` 映射容器端口到宿主机随机端口
     >> ``docker run -itd -P 80 [image name]``
 
-  > ``--net`` 指定网络
-    >> ``docker run -itd --net net_192_168_100 [image name]``
-
-  > ``--net="bridge" ``设置容器的网络模式（选项可以是：bridge,none,container,host）
+  > ``--net="bridge" (--network) ``设置容器的网络模式（选项可以是：bridge,none,container,host）
+    >> ``docker run -itd --network net_192_168_100 [image name]``
 
   > ``--ip string`` 分配指定网络中的ip
-    >> ``docker run -itd --net net_192_168_100 --ip 192.168.1.1 [image name]``
+    >> ``docker run -itd --network net_192_168_100 --ip 192.168.1.1 [image name]``
 
   > ``--restart [always|on-failure:3]`` 当容器停止时自动重启，重启3次。
     >> ``docker run -itd --restart on-failure:3 [image name]``
@@ -205,7 +203,8 @@
 - ``docker network [options]``
   ![docke network](./pic/dockernetwork.png)
   > ``docker network create [options]`` 创建网络,默认闯将出来是bridge
-    >> ``docker network create --subnet=192.168.100.0/24 network_192.168_100`` 创建名称为‘network_192.168_100’ 网络范围为192.168.100.0/24的网络。
+    >> ``docker network create --subnet=192.168.100.0/24 network_192.168_100`` 创建名称为‘network_192.168_100’ 网络范围为192.168.100.0/24的网络。(注意：强烈建议--subnet在创建网络时使用该选项。如果--subnet未指定，则docker守护程序会自动选择并为网络分配一个子网，并且可能会与您的基础架构中不由docker管理的另一个子网重叠。当容器连接到该网络时，这种重叠会导致连接问题或故障。除了--subnet选项，你也可以指定--gateway， --ip-range和--aux-address选项。)
+    >> ``-d overlay (--driver=overlay)``overlay属性的驱动。
     >> ![docker network create](./pic/dockernetworkcreate.png)
 
   > ``docker network ls`` 查看网络
@@ -216,6 +215,7 @@
 
   > ``docker network disconnect [option](-f 强制) [networkname] [CONTAINER ID|NAMES]`` 将容器从网络中断开。
 
+  > ``docker network rm [networkname]`` 删除网络
 
 ## 12.docker拷贝
 - 拷贝容器内的文件到宿主
