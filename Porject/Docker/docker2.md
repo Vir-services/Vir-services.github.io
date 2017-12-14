@@ -6,6 +6,10 @@
 ## 1.获取docker镜像
 > ``docker search [image name]``,搜索相关镜像。
 
+>> 自动化构建
+
+>> 我们除了可以在本地创建镜像push到dockerhub上，也可以利用dockerhub提供的自动化构建技术在服务端直接构建镜像。提供dockerhub连接一个包含Dockerfile文件的github的仓库，这样dockerhub的构建集群服务器就会自动构建镜像，这种方式构建出来的镜像会被标记为Automated Build。
+
 >> 如果下载镜像速度慢，可以考虑更换源。
 
 >> ``curl -sSL https://get.daocloud.io/daotools/set_mirror.sh |sh -s http://04be47cf.m.daocloud.io``
@@ -92,7 +96,7 @@
     >> ``docker run -itd --network net_192_168_100 [image name]``
 
   > ``--ip string`` 分配指定网络中的ip
-    >> ``docker run -itd --network net_192_168_100 --ip 192.168.1.1 [image name]``
+    >> ``docker run -itd --network net_192_168_100 --ip 192.168.100.100 [image name]``
 
   > ``--restart [always|on-failure:3]`` 当容器停止时自动重启，重启3次。
     >> ``docker run -itd --restart on-failure:3 [image name]``
@@ -166,12 +170,13 @@
  - 需要额外学习使用第三方工具。
 
 3.``使用docker本身提供的工具(常用)``
-  - ``docker attach [CONTAINER ID|NAMES]``
-    - Docker attach可以attach到一个已经运行的容器的stdin，然后进行命令执行的动作。
-但是需要注意的是，如果从这个stdin中exit，会导致容器的停止。
-  - ``docker exec [CONTAINER ID|NAMES] [COMMAND]``
+  - ``docker exec [CONTAINER ID|NAMES] [COMMAND]``  (推荐使用)
     - docker exec执行后，会命令执行返回值。
     > ``docker exec [CONTAINER ID|NAMES] [COMMAND]``
+
+  - ``docker attach [CONTAINER ID|NAMES]``  
+    - Docker attach可以attach到一个已经运行的容器的stdin，然后进行命令执行的动作。
+但是需要注意的是，如果从这个stdin中exit，会导致容器的停止。
 
     - 关于-i、-t参数.
       - 只用-i时，由于没有分配伪终端，看起来像pipe执行一样。但是执行结果、命令.返回值都可以正确获取。
@@ -181,6 +186,10 @@
     - 关于-d参数
       - 在后台执行一个进程。可以看出，如果一个命令需要长时间进程，使用-d参数会很快返回。 程序在后台运行。
       - 如果不使用-d参数，由于命令需要长时间执行，docker exec会卡住，一直等命令执行完成才返回。
+
+    - 当docker容器在 “-d”守护态运行的时候,用户就无法直接进入到容器中去，docker attach 容器id 就会一直卡着。因为此时容器运行的进程是ssh，而不是/bin/bash 也没有虚拟终端（-it）参数，所以是进入不到的.
+    - 可用: docker exec -it containerID /bin/bash
+
 
 ## 9.退出容器
 > ``ctrl+p --> ctrl+q``
