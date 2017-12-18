@@ -16,9 +16,11 @@
 
 ## [【Language】](/Porject/Language)
 
-## [【Cluster】](/Porject/ELK)
+## [【Cluster】](/Porject/Cluster)
 
-## [【版本控制】](/Porject/)
+## [【Linux】](/Porject/Linux)
+
+## [【VersionControl】](/Porject/VersionControl)
 
 #### 持续录入中 ...
 
