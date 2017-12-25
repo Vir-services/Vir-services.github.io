@@ -1,7 +1,8 @@
 # haproxy安装配置一
 
 ## 1.安装
-  - 源码安装
+
+- 源码安装
 
 ```bash
 #!/bin/bash
@@ -14,13 +15,14 @@ location="/usr/local/service/haproxy"
 wget -O /tmp/haproxy-1.7.7.tar.gz http://www.haproxy.org/download/1.7/src/haproxy-1.7.7.tar.gz
 tar zxf /tmp/haproxy-1.7.7.tar.gz -C /tmp
 cd /tmp/haproxy-1.7.7
-make  TARGET=$kernel ARCH=$arch PREFIX=$location  
+make  TARGET=$kernel ARCH=$arch PREFIX=$location
 make install PREFIX=/$location
 
 ```
- - 简易启动脚本
-  > 安装完成后创建etc目录，创建配置文件auth.cfg
 
+- 简易启动脚本
+  > 安装完成后创建etc目录，创建配置文件auth.cfg
+  >
   > ![hapictree](./pic/hatree.jpg)
 
 ```bash
@@ -47,15 +49,13 @@ pid2=$(netstat -ntpl |grep "haproxy"|awk '{print $NF}'|awk -F "/" '{ print ( $(N
 if [ -z "$pid1" ] && [ -z "$pid2"] ;then
         echo "no process."
 elif [ "$pid1" = "$pid2" ];then
-	kill -15 $pid1
-	echo "PID:$pid1 killed."
+  kill -15 $pid1
+  echo "PID:$pid1 killed."
 else
-	echo "kill error."
+  echo "kill error."
 fi
 
 }
-
-
 
 case $1 in
 start)
@@ -75,6 +75,5 @@ start
 esac
 
 ```
-
 
 ## auth.cfg 配置
